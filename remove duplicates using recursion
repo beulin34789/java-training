@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Solution {
+
+    static boolean[] visited = new boolean[256];
+
+    static void removeDuplicates(String str, int index, String result) {
+        if (index == str.length()) {
+            System.out.println(result);
+            return;
+        }
+
+        char current = str.charAt(index);
+        if (!visited[current]) {
+            visited[current] = true;
+            result += current;
+        }
+        removeDuplicates(str, index + 1, result);
+    }
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String input = s.nextLine();
+
+        removeDuplicates(input, 0, "");
+    }
+}
