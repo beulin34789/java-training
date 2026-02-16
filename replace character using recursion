@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Solution {
+
+    static String replaceChar(String str, char oldChar, char newChar) {
+        StringBuilder sb = new StringBuilder(str);
+   for (int i = 0; i < sb.length(); i++) {
+            if (sb.charAt(i) == oldChar)
+            {
+                sb.setCharAt(i, newChar);
+            }
+        }
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String str = s.nextLine();
+        char oldchar = s.next().charAt(0);
+        char newchar = s.next().charAt(0);
+
+        System.out.println(replaceChar(str, oldchar, newchar));
+    }
+}
