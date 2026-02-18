@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+interface X{
+    void add(int a,int b);
+}
+interface Y{
+    void subtract(int a,int b);
+}
+class s implements X,Y{
+    public void add(int a,int b){
+        System.out.println(a+b);
+    }
+    public void subtract(int a,int b){
+        System.out.println(a-b);
+    }
+}
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        int b=s.nextInt();
+        s ob=new s();
+        ob.add(a,b);
+        ob.subtract(a,b);
+       
+    }
+}
