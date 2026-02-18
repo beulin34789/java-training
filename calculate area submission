@@ -1,0 +1,36 @@
+import java.util.*;
+
+class Calculator {
+    int area(int side) {
+        return side * side;
+    }
+    int area(int length, int breadth) {
+        return length * breadth;
+    }
+    double area(double radius) {
+        double pi = 3.14;
+        return pi * radius * radius;
+    }
+}
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Calculator c = new Calculator();
+
+        String shape = sc.next();
+
+        if (shape.equalsIgnoreCase("square")) {
+            int side = sc.nextInt();
+            System.out.println(c.area(side));
+        }
+        else if (shape.equalsIgnoreCase("rectangle")) {
+            int length = sc.nextInt();
+            int breadth = sc.nextInt();
+            System.out.println(c.area(length, breadth));
+        }
+        else if (shape.equalsIgnoreCase("circle")) {
+            double radius = sc.nextDouble();
+            System.out.println(c.area(radius));
+        }
+    }
+}
