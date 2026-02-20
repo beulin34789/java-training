@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+class Student{
+    private String name;
+    private int rollno;
+    private double marks;
+    public void setName(String n){
+        name=n;
+    }
+    public String getName(){
+        return name;
+    }
+ public void setRollno(int r){
+       rollno=r;
+ }
+    public int getRollno(){
+       return rollno;
+ }
+  public void setMarks(double m){
+        marks=m;
+    }
+    public double getMarks(){
+        return marks;
+    }
+    }
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String n=sc.nextLine();
+        int r=sc.nextInt();
+        Double m=sc.nextDouble();
+        Student t=new Student();
+        t.setName(n);
+        t.setRollno(r);
+        t.setMarks(m);
+        System.out.println("Name:"+t.getName());
+        System.out.println("Rollno:"+t.getRollno());
+        System.out.println("Marks:" +t.getMarks());
+        
+    }
+}
